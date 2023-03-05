@@ -63,7 +63,7 @@ def reduce_token(state):
             "role": "system",
             "content": f"Error: {e}"
         })
-    chat_messages = [(history[i]['content'], parse_text(history[i+1]['content'])) for i in range(0, len(history)-1, 2)]
+    chat_messages = [("👨‍💻 我： " + history[i]['content'], "🤖 AI： " + parse_text(history[i+1]['content'])) for i in range(0, len(history)-1, 2)]
     return gr.update(value='', visible=True), chat_messages, state
 
 
