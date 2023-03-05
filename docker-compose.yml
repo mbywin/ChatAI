@@ -3,5 +3,6 @@ services:
         build: .
         ports:
             - "80:6000"
+        restart: always
         environment:
             - OPENAI_API_KEY
