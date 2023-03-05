@@ -1,0 +1,7 @@
+services:
+    web:
+        build: .
+        ports:
+            - "80:6000"
+        environment:
+            - OPENAI_API_KEY
